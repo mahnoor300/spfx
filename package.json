@@ -1,0 +1,22 @@
+{
+  "name": "spfx-cicd",
+  "version": "1.0.0",
+  "description": "SPFx project",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "@microsoft/sp-core-library": "^1.12.1",
+    "@microsoft/sp-webpart-base": "^1.12.1",
+    "@microsoft/sp-office365-api": "^1.12.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "@microsoft/sp-build-web": "^1.12.1",
+    "@microsoft/gulp-core-build": "^1.8.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
