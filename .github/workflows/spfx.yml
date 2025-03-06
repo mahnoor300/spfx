@@ -16,7 +16,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2  # Ensure the repository is checked out
+        uses: actions/checkout@v3  # Ensure the repository is checked out
+
+      - name: List files in the repository
+        run: ls -alh  # Debug step to check if package.json is in the root
 
       # Node.js runtime 
       - name: Node.js 10.x
@@ -86,4 +89,4 @@ jobs:
       # Deploy SPFx package
       - name: Deploy SPFx package
         shell: bash
-        run: m365 spo app deploy --name ${{ inputs.sharepoint_app_name }} --appCatalogUrl ${{ inputs.sharepoint_app_catalogue_url }} --scope ${{ inputs.sharepoint_app_catalogue_scope }}
+        run: m365 spo app deploy --name ${{ inputs.sharepoint_app_name }} --appCatalogUrl ${{ inputs.sharepoint_app_catalogue_url }} --scope ${{ inputs.sharepoint_app_catalogue_scope }} 4
